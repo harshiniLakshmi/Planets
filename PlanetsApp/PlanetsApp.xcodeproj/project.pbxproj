@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		299EC8A921E5D47400769332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EC8A821E5D47400769332 /* AppDelegate.swift */; };
-		299EC8AB21E5D47400769332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EC8AA21E5D47400769332 /* ViewController.swift */; };
 		299EC8AE21E5D47400769332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299EC8AC21E5D47400769332 /* Main.storyboard */; };
 		299EC8B121E5D47400769332 /* PlanetsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 299EC8AF21E5D47400769332 /* PlanetsApp.xcdatamodeld */; };
 		299EC8B321E5D47500769332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299EC8B221E5D47500769332 /* Assets.xcassets */; };
 		299EC8B621E5D47500769332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299EC8B421E5D47500769332 /* LaunchScreen.storyboard */; };
 		299EC8C121E5D47500769332 /* PlanetsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EC8C021E5D47500769332 /* PlanetsAppTests.swift */; };
 		299EC8CC21E5D47500769332 /* PlanetsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EC8CB21E5D47500769332 /* PlanetsAppUITests.swift */; };
+		299EC8DF21E61BE000769332 /* PlanetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EC8DE21E61BE000769332 /* PlanetsTableViewController.swift */; };
+		299EC8E121E61C5500769332 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EC8E021E61C5500769332 /* NetworkManager.swift */; };
+		299EC8E521E620F700769332 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EC8E421E620F700769332 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 /* Begin PBXFileReference section */
 		299EC8A521E5D47400769332 /* PlanetsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		299EC8A821E5D47400769332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		299EC8AA21E5D47400769332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		299EC8AD21E5D47400769332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		299EC8B021E5D47400769332 /* PlanetsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlanetsApp.xcdatamodel; sourceTree = "<group>"; };
 		299EC8B221E5D47500769332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		299EC8C721E5D47500769332 /* PlanetsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		299EC8CB21E5D47500769332 /* PlanetsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsAppUITests.swift; sourceTree = "<group>"; };
 		299EC8CD21E5D47500769332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		299EC8DE21E61BE000769332 /* PlanetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsTableViewController.swift; sourceTree = "<group>"; };
+		299EC8E021E61C5500769332 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		299EC8E421E620F700769332 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,12 @@
 		299EC8A721E5D47400769332 /* PlanetsApp */ = {
 			isa = PBXGroup;
 			children = (
+				299EC8DD21E61A4300769332 /* Network */,
+				299EC8DC21E61A3200769332 /* ViewModel */,
+				299EC8DB21E61A2900769332 /* Model */,
+				299EC8DA21E61A2300769332 /* View */,
+				299EC8D921E61A1800769332 /* Utils */,
 				299EC8A821E5D47400769332 /* AppDelegate.swift */,
-				299EC8AA21E5D47400769332 /* ViewController.swift */,
 				299EC8AC21E5D47400769332 /* Main.storyboard */,
 				299EC8B221E5D47500769332 /* Assets.xcassets */,
 				299EC8B421E5D47500769332 /* LaunchScreen.storyboard */,
@@ -126,6 +134,44 @@
 				299EC8CD21E5D47500769332 /* Info.plist */,
 			);
 			path = PlanetsAppUITests;
+			sourceTree = "<group>";
+		};
+		299EC8D921E61A1800769332 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				299EC8E421E620F700769332 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		299EC8DA21E61A2300769332 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				299EC8DE21E61BE000769332 /* PlanetsTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		299EC8DB21E61A2900769332 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		299EC8DC21E61A3200769332 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		299EC8DD21E61A4300769332 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				299EC8E021E61C5500769332 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299EC8AB21E5D47400769332 /* ViewController.swift in Sources */,
+				299EC8E521E620F700769332 /* Constants.swift in Sources */,
+				299EC8E121E61C5500769332 /* NetworkManager.swift in Sources */,
 				299EC8A921E5D47400769332 /* AppDelegate.swift in Sources */,
+				299EC8DF21E61BE000769332 /* PlanetsTableViewController.swift in Sources */,
 				299EC8B121E5D47400769332 /* PlanetsApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VL64T2U4ME;
 				INFOPLIST_FILE = PlanetsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VL64T2U4ME;
 				INFOPLIST_FILE = PlanetsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
